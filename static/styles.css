@@ -35,9 +35,9 @@ color:var(--sage);
 a{ text-decoration:none; }
 
 /* ---- Buttons ---- */
-.btn-forest{ background:var(--bs-primary); border-color:var(--bs-primary); color:#fff; }
-.btn-forest:hover{ background:var(--green-shadow); border-color:var(--green-shadow); color:#fff; }
-.btn-outline-forest{ border-color:var(--green-shadow); color:var(--green-shadow); }
+.btn-forest{ background:var(--bs-primary); border-color:var(--bs-primary); color:var(--tint)}
+.btn-forest:hover{ background:var(--green-shadow); border-color:var(--green-shadow); color:var(--tint); }
+.btn-outline-forest{ border-color:var(--tint); color:var(--tint); }
 .btn-outline-forest:hover{ background:var(--tint); border-color:var(--bs-primary); color:var(--green-shadow); }
 .btn-gold{ background:var(--gold); border-color:var(--gold); color:var(--green-shadow); font-weight:600; }
 .btn-gold:hover{ background:var(--gold-soft); border-color:var(--gold-soft); color:var(--green-shadow); }
@@ -79,7 +79,17 @@ text-transform:uppercase; color:var(--sage); white-space:nowrap;
 }
 
 /* ---- Hero ---- */
-.hero{ padding:6rem 0 4.5rem; }
+.hero{
+    padding:6rem 0 4.5rem; 
+    background:
+        /* linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), */
+        linear-gradient(
+            rgba(0,0,0,0) 0%,
+            rgba(0,0,0,0.65) 60%,
+            rgba(0,0,0,0) 100%
+        ),
+        url('./images/bible.webp') center/cover no-repeat;
+}
 .hero h1{ font-size:clamp(2.2rem,5vw,3.6rem); line-height:1.05; }
 .hero h1 em{ font-style:italic; color:var(--gold); font-weight:500; }
 .hero .lede{ max-width:46ch; color:#33422b; font-size:1.08rem; }
@@ -100,7 +110,7 @@ text-transform:uppercase; color:var(--sage); white-space:nowrap;
 position:relative; display:flex; align-items:center; justify-content:center;
 aspect-ratio:1/1; max-width:380px; margin:0 auto;
 }
-.hero-seal::before{
+/* .hero-seal::before{
 content:""; position:absolute; inset:0; border-radius:50%;
 background:radial-gradient(circle, rgba(214,178,22,.30) 0%, rgba(214,178,22,.12) 45%, rgba(214,178,22,0) 72%);
 }
@@ -110,7 +120,7 @@ filter:drop-shadow(0 18px 30px rgba(22,36,15,.18));
 opacity:0; transform:scale(.92);
 animation:seal-in 1s cubic-bezier(.2,.8,.2,1) .15s forwards;
 }
-@keyframes seal-in{ to{ opacity:1; transform:scale(1); } }
+@keyframes seal-in{ to{ opacity:1; transform:scale(1); } } */
 
 /* ---- Verse strip ---- */
 .verse-strip{ background:var(--bs-primary); color:var(--tint); padding:1.1rem 0; }
