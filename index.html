@@ -120,8 +120,31 @@
       <h2 class="mb-3">Choose the path that fits your calling</h2>
       <p style="color:#4a5a41;">Each program combines biblical studies, theology, and practical ministry training, with the depth and focus advancing throughout each level of study.</p>
     </div>
+
     <div class="row g-4 mb-4">
+
+      <!-- Diploma Program -->
       <div class="col-md-6">
+        <div class="program-card p-4">
+          <div class="d-flex flex-column align-items-start gap-2 mb-3">
+            <span class="badge badge-outline px-2 py-1">Diploma Program</span>
+            <span class="badge badge-outline px-2 py-1" style=background-color:#e5efd8;>Home Study Available</span>
+            <span class="small text-muted"><strong>Prerequisite:</strong> Certificate Program "Biblical Studies"</span>
+          </div>
+          <h3 class="h4 mb-2">Theology in Christian Ministry</h3>
+          <p style="color:#48583f;">Builds upon foundational studies with deeper theological knowledge and practical preparation for Christian ministry.</p>
+          <a 
+            href="#enroll"
+            class="prog-link" 
+            data-bs-toggle="modal"
+            data-bs-target="#diplomaProgram">
+            View courses &rarr;
+          </a>
+        </div>
+      </div>
+
+      <!-- Certificate Program -->
+      <div class="col-md-6">        
         <div class="program-card p-4">
           <div class="d-flex flex-column align-items-start gap-2 mb-3">
             <span class="badge badge-outline px-2 py-1">Certificate Program</span>
@@ -129,22 +152,20 @@
           </div>
           <h3 class="h4 mb-2">Biblical Studies</h3>
           <p style="color:#48583f;">An introduction to biblical studies and foundational Christian teachings, designed to develop a strong understanding of Scripture and faith.</p>
-          <a href="#enroll" class="prog-link">Explore this program &rarr;</a>
+          <a 
+            href="#enroll"
+            class="prog-link" 
+            data-bs-toggle="modal"
+            data-bs-target="#certificateProgram">
+            View courses &rarr;
+          </a>
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="program-card p-4">
-          <div class="d-flex flex-column align-items-start gap-2 mb-3">
-            <span class="badge badge-outline px-2 py-1">Diploma Program</span>
-            <span class="badge badge-outline px-2 py-1" style=background-color:#e5efd8;>Home Study Available</span>
-          </div>
-          <h3 class="h4 mb-2">Theology in Christian Ministry</h3>
-          <p style="color:#48583f;">Builds upon foundational studies with deeper theological knowledge and practical preparation for Christian ministry.</p>
-          <a href="#enroll" class="prog-link">Explore this program &rarr;</a>
-        </div>
-      </div>
+      
     </div>
-    <div class="row g-4">  
+
+    <div class="row g-4"> 
+      <!-- Advanced Program One --> 
       <div class="col-md-4">
         <div class="program-card p-4">
           <div class="d-flex gap-2 mb-3">
@@ -153,9 +174,16 @@
           </div>
           <h3 class="h4 mb-2">Advanced Biblical & Ministry Studies</h3>
           <p style="color:#48583f;">Develops deeper skills in biblical interpretation, research, preaching, pastoral counselling, and church administration.</p>
-          <a href="#enroll" class="prog-link">Explore this program &rarr;</a>
+          <a 
+            href="#enroll"
+            class="prog-link" 
+            data-bs-toggle="modal"
+            data-bs-target="#programOne">
+            View courses &rarr;
+          </a>
         </div>
       </div>
+      <!-- Advanced Program Two -->
       <div class="col-md-4">
         <div class="program-card p-4">
           <div class="d-flex gap-2 mb-3">
@@ -164,9 +192,16 @@
           </div>
           <h3 class="h4 mb-2">Advanced Theology & Christian Ethics</h3>
           <p style="color:#48583f;">Explores advanced theological subjects while developing a deeper understanding of Christian stewardship, ethics, and biblical history.</p>
-          <a href="#enroll" class="prog-link">Explore this program &rarr;</a>
+          <a 
+            href="#enroll"
+            class="prog-link" 
+            data-bs-toggle="modal"
+            data-bs-target="#programTwo">
+            View courses &rarr;
+          </a>
         </div>
       </div>
+      <!-- Advanced Program Three -->
       <div class="col-md-4">
         <div class="program-card p-4">
           <div class="d-flex gap-2 mb-3">
@@ -175,12 +210,169 @@
           </div>
           <h3 class="h4 mb-2">Advanced Biblical Studies & Eschatology</h3>
           <p style="color:#48583f;">Provides advanced study in theology, prophecy, Daniel, Revelation, and the doctrine of things to come.</p>
-          <a href="#enroll" class="prog-link">Explore this program &rarr;</a>
+          <a 
+            href="#enroll"
+            class="prog-link" 
+            data-bs-toggle="modal"
+            data-bs-target="#programThree">
+            View courses &rarr;
+          </a>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Program Modals -->
+ <!-- Certificate Modal -->
+<div class="modal fade" id="certificateProgram" tabindex="-1" aria-labelledby="certificateProgramLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="certificateProgramLabel">Certificate Program</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Courses</h6>      
+        <ul>
+          <li>Systematic Theology One</li>
+          <li>Minor Prophets</li>          
+          <li>General Epistles</li>
+          <li>The Will of God</li>
+          <li>Book of Acts</li>
+          <li>Effective Communication</li>
+          <li>Personal Evangelism</li>          
+        </ul>
+        <a href="#" class="prog-link d-inline-block pb-3">Explore this program &rarr;</a> 
+
+        <div class="border-top pt-3">
+          <h6 class="text-muted"><strong>Home Study</strong></h6>      
+          <ul>
+            <li>Systematic Theology One</li>
+            <li>Minor Prophets</li>
+            <li>General Epistles</li>
+            <li>The Will of God</li>
+            <li>Book of Acts</li>            
+            <li>Book of Romans</li>
+          </ul>
+        </div>
+        <a href="#" class="prog-link">Explore this program &rarr;</a>        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>        
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- Diploma Modal -->
+<div class="modal fade" id="diplomaProgram" tabindex="-1" aria-labelledby="diplomaProgramLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="diplomaProgramLabel">Diploma Program</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Courses</h6>      
+        <ul>
+          <li>Systematic Theology Two</li>
+          <li>Old Testament Survey</li>
+          <li>New Testament Survey</li>
+          <li>Christian Leadership One</li>
+          <li>Tabernacle</li>
+          <li>Church History</li>
+        </ul>
+        <p class="small text-muted"><strong>Home study available for all courses</strong></p>
+        <a href="#" class="prog-link">Explore this program &rarr;</a>        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>        
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- Advanced Program One Modal -->
+<div class="modal fade" id="programOne" tabindex="-1" aria-labelledby="programOneLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="programOneLabel">Advanced Program One</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Courses</h6>      
+        <ul>
+          <li>Mechanics of Research</li>
+          <li>Pastoral Counselling</li>
+          <li>Church Administration</li>
+          <li>Principles of Teaching</li>
+          <li>Hermeneutics</li>
+          <li>Expository Preaching</li>
+        </ul>
+        <p class="small text-muted"><strong>Thesis Requirement</strong></p>
+        <a href="#" class="prog-link">Explore this program &rarr;</a>        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>        
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- Advanced Program Two Modal -->
+<div class="modal fade" id="programTwo" tabindex="-1" aria-labelledby="programTwoLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="programTwoLabel">Advanced Program Two</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Courses</h6>      
+        <ul>
+          <li>Eschatology One</li>
+          <li>Christian Stewardship</li>
+          <li>Christian Ethics</li>
+          <li>History of the Bible</li>
+          <li>Anthropology</li>
+        </ul>
+        <p class="small text-muted"><strong>Thesis Requirement</strong></p>
+        <a href="#" class="prog-link">Explore this program &rarr;</a>        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>        
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- Advanced Program Three Modal -->
+<div class="modal fade" id="programThree" tabindex="-1" aria-labelledby="programThreeLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="programThreeLabel">Advanced Program Three</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Courses</h6>      
+        <ul>
+          <li>The Moody Handbook of Theology</li>
+          <li>Eschatology Two (Things to Come)</li>
+          <li>The Book of Daniel</li>
+          <li>Revelation</li>
+        </ul>
+        <p class="small text-muted"><strong>Dissertation Requirement</strong></p>
+        <a href="#" class="prog-link">Explore this program &rarr;</a>        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>        
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- FORMAT -->
 <section class="format-section" id="format">
@@ -282,6 +474,14 @@
   </div>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script>
+  const myModal = document.getElementById('myModal')
+  const myInput = document.getElementById('myInput')
+
+  myModal.addEventListener('shown.bs.modal', () => {
+    myInput.focus()
+  })
+</script>
 </body>
 </html>
