@@ -7,7 +7,7 @@ output_dir = Path("docs")
 output_dir.mkdir(exist_ok=True)
 
 pages = [
-    "index1.html",
+    "index.html",
     "programs.html"
 ]
 
