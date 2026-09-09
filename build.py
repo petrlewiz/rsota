@@ -1,21 +1,22 @@
 from jinja2 import Environment, FileSystemLoader
-import pandas as pd
-import os
+from pathlib import Path
 
-df = pd.read_csv("professor_data.csv")
+env  = Environment(loader=FileSystemLoader("templates"))
 
-env = Environment(loader=FileSystemLoader("templates"))
-template = env.get_template("professor.html")
+output_dir = Path("docs")
+output_dir.mkdir(exist_ok=True)
 
+pages = [
+    "index1.html",
+    "programs.html"
+]
 
-for _, row in df.iterrows():
-     slug = row["Slug"]
+for page in pages:
+    template = env.get_template(page)
 
-     html = template.render(
-          name = row["Name"],
-          bio = row["Bio"]
-     )
-     os.makedirs("professors", exist_ok=True)
+    html = template.render()
 
-     with open(f'professors/{slug}.html', "w", encoding="utf-8") as file: 
-          file.write(html)
+    output_file = output_dir / page
+    output_file.write_text(html, encoding="utf-8")
+
+    print(f"Built {output_file}")

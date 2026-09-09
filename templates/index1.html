@@ -1,0 +1,397 @@
+{% extends "base.html" %}
+
+{% block title %}Rhema Studies of Theology Association{% endblock %}
+
+{% block stylesheet %}<link href="../static/styles.css" rel="stylesheet">{% endblock %}
+
+
+{% block content %}
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-6">
+        <!-- <p class="eyebrow mb-3 font-brand" style="letter-spacing:.08em;">Rhema Studies of Theology Association</p> -->
+        <h1 class="mb-4" style="color: #e5efd8;">Trained in the Word, <br>equipped for <em>ministry</em>.</h1>
+        <p class="lede mb-4" style="color: #e5efd8; ">RSOTA equips students to read Scripture carefully, teach it faithfully, and serve effectively through simple, profound, Christ-centered biblical education.</p>
+        <div class="d-flex flex-wrap gap-3">
+          <a href="#enroll" class="btn btn-forest px-4 py-2">Begin Your Application</a>
+          <a href="#programs" class="btn btn-outline-forest px-4 py-2">View Programs</a>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="hero-seal">
+          <img src="static/images/logo.png" style="width: 375px;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VERSE STRIP -->
+<div class="verse-strip text-center">
+  <p>&ldquo; &hellip;the sword of the Spirit, which is the word of God.&rdquo; <span class="ref">&mdash; Ephesians 6:17</span></p>
+</div>
+
+<!-- ABOUT -->
+<section class="about-section" id="about">
+  <div class="container">
+    <div class="row gy-5">
+      <div class="col-lg-5">
+        <blockquote class="about-quote mb-0">
+          For the perfecting of the saints, for the work of the ministry, for the edifying of the body of Christ.
+          <cite>— Ephesians 4:12</cite>
+        </blockquote>
+      </div>
+      <div class="col-lg-7">
+        <p class="eyebrow mb-2">Our Foundation</p>
+        <h2 class="mb-3">Begin with the Word, <br>grow in truth</h2>
+        <p style="color:#33422b; max-width:56ch;">Founded in 1999 by Rev. Dr. Everald Lewis, Rhema Studies of Theology Association & Biblical Training (RSOTA) is committed to providing Christ-centered, doctrinally sound biblical education.</p>
+        <p style="color:#33422b; max-width:56ch;">Students can expect systematic study of Scripture, theology, and practical ministry, equipping them with the knowledge, understanding, and tools needed to faithfully teach the Word and effectively serve in ministry.</p>
+        <div class="row mt-4 pt-4 border-top">
+          <div class="col-4">
+            <div class="stat-num">38</div>
+            <div class="stat-label">Years training pastors &amp; teachers</div>
+          </div>
+          <div class="col-4">
+            <div class="stat-num">1,200+</div>
+            <div class="stat-label">Graduates now in ministry</div>
+          </div>
+          <div class="col-4">
+            <div class="stat-num">3</div>
+            <div class="stat-label">Countries represented</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY RSOTA? -->
+<section class="cta-band" id="enroll">
+  <div class="container d-flex flex-wrap align-items-center justify-content-between gap-4">
+    <h2 class="mb-0" style="max-width:520px;">Why RSOTA?</h2>
+    <h5 class="px-4 py-2" style="max-width:600px;">With a variety of programs to choose from, RSOTA provides students with opportunities to grow in biblical understanding, develop practical ministry skills, and prepare for effective service in the work of the Lord.</h5>
+  </div>
+</section>
+
+<!-- PROGRAMS -->
+<section class="py-6" id="programs" style="padding:6rem 0;">
+  <div class="container">
+    <div class="mb-5" style="max-width:640px;">
+      <p class="eyebrow mb-2">Programs of Study</p>
+      <h2 class="mb-3">Choose the path that fits your calling</h2>
+      <p style="color:#4a5a41;">Each program combines biblical studies, theology, and practical ministry training, with the depth and focus advancing throughout each level of study.</p>
+    </div>
+
+    <div class="row g-4 mb-4">
+
+      <!-- Diploma Program -->
+      <div class="col-md-6">
+        <div class="program-card p-4">
+          <div class="d-flex flex-column align-items-start gap-2 mb-3">
+            <span class="badge badge-outline px-2 py-1">Diploma Program</span>
+            <span class="badge badge-outline px-2 py-1" style=background-color:#e5efd8;>Home Study Available</span>
+            <span class="small text-muted"><strong>Prerequisite:</strong> Certificate Program "Biblical Studies"</span>
+          </div>
+          <h3 class="h4 mb-2">Theology in Christian Ministry</h3>
+          <p style="color:#48583f;">Builds upon foundational studies with deeper theological knowledge and practical preparation for Christian ministry.</p>
+          <a 
+            href="#enroll"
+            class="prog-link" 
+            data-bs-toggle="modal"
+            data-bs-target="#diplomaProgram">
+            View courses &rarr;
+          </a>
+        </div>
+      </div>
+
+      <!-- Certificate Program -->
+      <div class="col-md-6">        
+        <div class="program-card p-4">
+          <div class="d-flex flex-column align-items-start gap-2 mb-3">
+            <span class="badge badge-outline px-2 py-1">Certificate Program</span>
+            <span class="badge badge-outline px-2 py-1" style=background-color:#e5efd8;>Home Study Available</span>
+          </div>
+          <h3 class="h4 mb-2">Biblical Studies</h3>
+          <p style="color:#48583f;">An introduction to biblical studies and foundational Christian teachings, designed to develop a strong understanding of Scripture and faith.</p>
+          <a 
+            href="#enroll"
+            class="prog-link" 
+            data-bs-toggle="modal"
+            data-bs-target="#certificateProgram">
+            View courses &rarr;
+          </a>
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="row g-4"> 
+      <!-- Advanced Program One --> 
+      <div class="col-md-4">
+        <div class="program-card p-4">
+          <div class="d-flex gap-2 mb-3">
+            <span class="badge badge-outline px-2 py-1">Advanced Program One</span>
+            <!-- <span class="badge badge-outline px-2 py-1">Distance</span> -->
+          </div>
+          <h3 class="h4 mb-2">Advanced Biblical & Ministry Studies</h3>
+          <p style="color:#48583f;">Develops deeper skills in biblical interpretation, research, preaching, pastoral counselling, and church administration.</p>
+          <a 
+            href="#enroll"
+            class="prog-link" 
+            data-bs-toggle="modal"
+            data-bs-target="#programOne">
+            View courses &rarr;
+          </a>
+        </div>
+      </div>
+      <!-- Advanced Program Two -->
+      <div class="col-md-4">
+        <div class="program-card p-4">
+          <div class="d-flex gap-2 mb-3">
+            <span class="badge badge-outline px-2 py-1">Advanced Program Two</span>
+            <!-- <span class="badge badge-outline px-2 py-1">On Campus</span> -->
+          </div>
+          <h3 class="h4 mb-2">Advanced Theology & Christian Ethics</h3>
+          <p style="color:#48583f;">Explores advanced theological subjects while developing a deeper understanding of Christian stewardship, ethics, and biblical history.</p>
+          <a 
+            href="#enroll"
+            class="prog-link" 
+            data-bs-toggle="modal"
+            data-bs-target="#programTwo">
+            View courses &rarr;
+          </a>
+        </div>
+      </div>
+      <!-- Advanced Program Three -->
+      <div class="col-md-4">
+        <div class="program-card p-4">
+          <div class="d-flex gap-2 mb-3">
+            <span class="badge badge-outline px-2 py-1">Advanced Program Three</span>
+            <!-- <span class="badge badge-outline px-2 py-1">On Campus</span> -->
+          </div>
+          <h3 class="h4 mb-2">Advanced Biblical Studies & Eschatology</h3>
+          <p style="color:#48583f;">Provides advanced study in theology, prophecy, Daniel, Revelation, and the doctrine of things to come.</p>
+          <a 
+            href="#enroll"
+            class="prog-link" 
+            data-bs-toggle="modal"
+            data-bs-target="#programThree">
+            View courses &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Program Modals -->
+ <!-- Certificate Modal -->
+<div class="modal fade" id="certificateProgram" tabindex="-1" aria-labelledby="certificateProgramLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="certificateProgramLabel">Certificate Program</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Courses</h6>      
+        <ul>
+          <li>Systematic Theology One</li>
+          <li>Minor Prophets</li>          
+          <li>General Epistles</li>
+          <li>The Will of God</li>
+          <li>Book of Acts</li>
+          <li>Effective Communication</li>
+          <li>Personal Evangelism</li>          
+        </ul>
+        <a href="#" class="prog-link d-inline-block pb-3">Explore this program &rarr;</a> 
+
+        <div class="border-top pt-3">
+          <h6 class="text-muted"><strong>Home Study Option</strong></h6>      
+          <ul>
+            <li>Systematic Theology One</li>
+            <li>Minor Prophets</li>
+            <li>General Epistles</li>
+            <li>The Will of God</li>
+            <li>Book of Acts</li>            
+            <li>Book of Romans</li>
+          </ul>
+        </div>
+        <a href="#" class="prog-link">Explore this program &rarr;</a>        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>        
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- Diploma Modal -->
+<div class="modal fade" id="diplomaProgram" tabindex="-1" aria-labelledby="diplomaProgramLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="diplomaProgramLabel">Diploma Program</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Courses</h6>      
+        <ul>
+          <li>Systematic Theology Two</li>
+          <li>Old Testament Survey</li>
+          <li>New Testament Survey</li>
+          <li>Christian Leadership One</li>
+          <li>Tabernacle</li>
+          <li>Church History</li>
+        </ul>
+        <p class="small text-muted"><strong>Home study available for all courses</strong></p>
+        <a href="#" class="prog-link">Explore this program &rarr;</a>        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>        
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- Advanced Program One Modal -->
+<div class="modal fade" id="programOne" tabindex="-1" aria-labelledby="programOneLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="programOneLabel">Advanced Program One</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Courses</h6>      
+        <ul>
+          <li>Mechanics of Research</li>
+          <li>Pastoral Counselling</li>
+          <li>Church Administration</li>
+          <li>Principles of Teaching</li>
+          <li>Hermeneutics</li>
+          <li>Expository Preaching</li>
+        </ul>
+        <p class="small text-muted"><strong>Thesis Requirement</strong></p>
+        <a href="#" class="prog-link">Explore this program &rarr;</a>        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>        
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- Advanced Program Two Modal -->
+<div class="modal fade" id="programTwo" tabindex="-1" aria-labelledby="programTwoLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="programTwoLabel">Advanced Program Two</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Courses</h6>      
+        <ul>
+          <li>Eschatology One</li>
+          <li>Christian Stewardship</li>
+          <li>Christian Ethics</li>
+          <li>History of the Bible</li>
+          <li>Anthropology</li>
+        </ul>
+        <p class="small text-muted"><strong>Thesis Requirement</strong></p>
+        <a href="#" class="prog-link">Explore this program &rarr;</a>        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>        
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- Advanced Program Three Modal -->
+<div class="modal fade" id="programThree" tabindex="-1" aria-labelledby="programThreeLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="programThreeLabel">Advanced Program Three</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Courses</h6>      
+        <ul>
+          <li>The Moody Handbook of Theology</li>
+          <li>Eschatology Two (Things to Come)</li>
+          <li>The Book of Daniel</li>
+          <li>Revelation</li>
+        </ul>
+        <p class="small text-muted"><strong>Dissertation Requirement</strong></p>
+        <a href="#" class="prog-link">Explore this program &rarr;</a>        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FORMAT -->
+<section class="format-section" id="format">
+  <div class="container">
+    <div class="mb-5" style="max-width:640px;">
+      <p class="eyebrow mb-2">Study Format</p>
+      <h2 class="mb-3">Find what works for you</h2>
+      <p style="color:#cfe0c2;">Choose the study format that best fits your program and schedule.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="format-card">
+          <h3 class="mb-3">On Campus</h3>
+          <ul>
+            <li>Hamilton Campus</li>
+            <li>
+              Saturday, 10:00 AM - 1:30 PM
+              <div class="mt-2">Hamilton Church of God</div>
+              <div>1955 Upper James Street, Hamilton, Ontario L9B 1K8</div>
+              <div>Tel: (905) 517-5762</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="format-card">
+          <h3 class="mb-3">Distance Learning</h3>
+          <ul>
+            <li>Online Study</li>
+            <li>Monday and Thursday, 7:30 PM - 9:30 PM</li>            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="testimonial-section" id="testimonial">
+  <div class="container">
+    <p class="eyebrow">Voices from RSOTA</p>
+    <blockquote>
+      &ldquo;I came to RSOTA already leading a congregation and unsure whether I was teaching Scripture or my own assumptions about it. Three years in, I finally trust the text more than my instincts.&rdquo;
+    </blockquote>
+    <p class="testimonial-name">— Pastor Simeon Okafor, Diploma in Theology in Christian Ministry '21</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="container d-flex flex-wrap align-items-center justify-content-between gap-4">
+    <h2 class="mb-0" style="max-width:520px;">Applications for the next intake close September 30.</h2>
+    <a href="#" class="btn btn-gold px-4 py-2">Start Your Application</a>
+  </div>
+</section>
+
+{% endblock %}
+
