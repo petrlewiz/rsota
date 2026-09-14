@@ -9,7 +9,7 @@ output_dir.mkdir(exist_ok=True)
 
 pages = [
     "index.html",
-    "programs.html",
+    "course-catalog.html",
     "statement.html"
 ]
 
