@@ -156,7 +156,15 @@ color:var(--sage); border:1px solid var(--sage); background:transparent; font-we
 /* .format-section{ background:var(--bs-primary); color:var(--tint); padding:6rem 0; } */
 .format-section .eyebrow{ color:var(--gold-soft); }
 .format-section h2{ color:#fff; }
-.format-card{ background:var(--green-shadow); border-radius:2px; padding:2rem; height:100%; }
+.format-card {
+    background: rgba(22, 36, 15, 0.65);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 2px;
+    padding: 2rem;
+    height: 100%;
+}
+/* .format-card{ background:var(--green-shadow); border-radius:2px; padding:2rem; height:100%; } */
 .format-card h3{ color:var(--gold-soft); font-size:1.3rem; }
 .format-card ul{ list-style:none; padding:0; margin:0; }
 .format-card li{ padding:.55rem 0; border-top:1px solid rgba(250,247,239,.12); font-size:.92rem; color:#dfe9d3; }
