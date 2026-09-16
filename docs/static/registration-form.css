@@ -1,0 +1,137 @@
+/* ============================================================
+   Theology Registration Form — page-specific styles
+   Depends on styles.css being loaded first (uses its CSS
+   variables and shared classes: .eyebrow, .font-display, .btn-forest)
+   ============================================================ */
+
+body{ padding:3rem 1rem; }
+
+.reg-wrapper{
+  max-width:760px;
+  margin:0 auto;
+  background:var(--paper);
+  border:1px solid rgba(22,36,15,.12);
+  border-top:4px solid var(--bs-primary);
+  border-radius:2px;
+  padding:3rem;
+}
+
+.reg-title{ margin-bottom:.25rem; }
+.reg-sub{ color:var(--sage); font-size:.92rem; margin-bottom:2rem; }
+
+.section-label{
+  font-family:'Space Mono', monospace;
+  font-size:.75rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--gold);
+  background:var(--green-shadow);
+  display:inline-block;
+  padding:.3rem .7rem;
+  border-radius:2px;
+  margin:2.25rem 0 1.25rem;
+}
+.section-label:first-of-type{ margin-top:0; }
+
+.reg-wrapper label{
+  font-family:'Work Sans', sans-serif;
+  font-weight:500;
+  color:var(--green-shadow);
+  font-size:.92rem;
+}
+
+.form-control, .form-select{
+  border:1px solid rgba(22,36,15,.2);
+  border-radius:2px;
+  background:#fff;
+  color:var(--green-shadow);
+}
+.form-control:focus, .form-select:focus{
+  border-color:var(--bs-primary);
+  box-shadow:0 0 0 .2rem rgba(34,89,20,.15);
+}
+
+/* ---- Radio "pill" cards for Program selection ---- */
+.program-radios{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1rem;
+}
+@media (max-width:576px){
+  .program-radios{ grid-template-columns:1fr; }
+}
+.program-option{
+  position:relative;
+}
+.program-option input[type="radio"]{
+  position:absolute;
+  opacity:0;
+  width:100%;
+  height:100%;
+  margin:0;
+  cursor:pointer;
+}
+.program-option label{
+  display:flex;
+  flex-direction:column;
+  gap:.2rem;
+  border:1px solid rgba(22,36,15,.2);
+  border-radius:2px;
+  padding:1rem 1.1rem;
+  background:#fff;
+  cursor:pointer;
+  transition:border-color .18s ease, background .18s ease, transform .18s ease;
+}
+.program-option label .prog-name{
+  font-family:'Fraunces', serif;
+  font-weight:600;
+  font-size:1.1rem;
+  color:var(--green-shadow);
+}
+.program-option label .prog-desc{
+  font-family:'Work Sans', sans-serif;
+  font-size:.8rem;
+  color:var(--sage);
+}
+.program-option input[type="radio"]:checked + label{
+  border-color:var(--bs-primary);
+  background:var(--tint);
+  transform:translateY(-2px);
+}
+.program-option input[type="radio"]:checked + label .prog-name::before{
+  content:"● ";
+  color:var(--bs-primary);
+}
+.program-option input[type="radio"]:focus-visible + label{
+  outline:2px solid var(--gold);
+  outline-offset:2px;
+}
+
+.form-check-input:checked{
+  background-color:var(--bs-primary);
+  border-color:var(--bs-primary);
+}
+.form-check-input:focus{
+  border-color:var(--bs-primary);
+  box-shadow:0 0 0 .2rem rgba(34,89,20,.15);
+}
+
+.invalid-feedback{ font-family:'Work Sans', sans-serif; font-size:.8rem; }
+
+#formSuccessMessage{
+  border:1px solid var(--bs-primary);
+  background:var(--tint);
+  color:var(--green-shadow);
+  border-radius:2px;
+}
+#formErrorMessage{
+  border:1px solid #a33;
+  background:#f8e6e6;
+  color:#7a1f1f;
+  border-radius:2px;
+}
+
+.btn-forest:disabled{
+  opacity:.65;
+  cursor:not-allowed;
+}
