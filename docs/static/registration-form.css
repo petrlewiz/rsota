@@ -93,14 +93,17 @@
   color:var(--sage);
 }
 .program-option input[type="radio"]:checked + label{
-  border-color:var(--bs-primary);
-  background:var(--tint);
+  border-color:var(--gold);
+  background:var(--gold);
   transform:translateY(-2px);
 }
-.program-option input[type="radio"]:checked + label .prog-name::before{
+.program-option input[type="radio"]:checked + label .prog-desc{
+  color:var(--green-shadow);
+}
+/* .program-option input[type="radio"]:checked + label .prog-name::before{
   content:"● ";
   color:var(--bs-primary);
-}
+} */
 .program-option input[type="radio"]:focus-visible + label{
   outline:2px solid var(--gold);
   outline-offset:2px;
