@@ -174,13 +174,37 @@
 
   </form>
 
-  <div id="formSuccessMessage" class="alert mt-4 d-none" role="alert">
+
+
+  <!-- <div id="formSuccessMessage" class="alert mt-4 d-none" role="alert">
     Thank you! Your registration has been submitted successfully.
-  </div>
+  </div> -->
   <div id="formErrorMessage" class="alert mt-4 d-none" role="alert">
     Sorry, there was a problem submitting your registration. Please try again, or contact us directly.
+  </div>  
+</div>
+
+<!-- Success Modal -->
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Form Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-sm">
+    <div class="modal-content">
+      <div class="modal-body text-center">
+        <h5 id="successModalLabel">Submission successful!</h5>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-forest px-4 btn-sm" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
   </div>
 </div>
+
+
 
 
 <footer id="contact">
@@ -230,12 +254,15 @@
   (function () {
     'use strict';
     const form = document.getElementById('theologyRegistrationForm');
-    const successMessage = document.getElementById('formSuccessMessage');
+    // const successMessage = document.getElementById('formSuccessMessage');
     const errorMessage = document.getElementById('formErrorMessage');
     const programRadios = document.querySelectorAll('input[name="program"]');
     const programFeedback = document.getElementById('programFeedback');
     const submitBtn = form.querySelector('button[type="submit"]');
     const submitBtnDefaultText = submitBtn.textContent;
+    
+    const successModalEL = document.getElementById('successModal');
+    const successModal = new bootstrap.Modal(successModalEL);
 
     function programIsValid() {
       return Array.from(programRadios).some(r => r.checked);
@@ -252,7 +279,7 @@
       event.stopPropagation();
 
       updateProgramFeedback();
-      successMessage.classList.add('d-none');
+      // successMessage.classList.add('d-none');
       errorMessage.classList.add('d-none');
 
       if (!form.checkValidity() || !programIsValid()) {
@@ -271,7 +298,9 @@
       })
         .then(response => {
           if (response.ok) {
-            successMessage.classList.remove('d-none');
+            // successMessage.classList.remove('d-none');
+            successModal.show();
+
             form.reset();
             form.classList.remove('was-validated');
             programFeedback.style.display = 'none';
