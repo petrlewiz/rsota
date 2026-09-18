@@ -208,4 +208,5 @@ footer .brand-text{ color:#fff; font-family:'Barlow Semi Condensed', sans-serif;
 /* ---- Statement of Faith ---- */
 .statement{ background:var(--tint); padding:6rem 0; }
 
-
+.modal-style{
+  background-color: rgba(250, 247, 239);}
