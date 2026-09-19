@@ -1,1 +1,74 @@
-{% extends base.html %}
+{% extends "base.html" %}
+
+
+{% block content %}
+<!-- HERO -->
+<section class="hero-statement">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-6">
+        <!-- <p class="eyebrow mb-3 font-brand" style="letter-spacing:.08em;">Rhema Studies of Theology Association</p> -->
+        <h1 class="mb-4" style="color: #e5efd8;"><em>Ministry</em> Center.</h1>
+        <p class="lede mb-4" style="color: #e5efd8; ">Supporting ministers with training, resources, and opportunities to grow in their calling and serve effectively.</p>
+    </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- PROGRAMS -->
+<section class="py-6" id="programs" style="padding:6rem 0;">
+  <div class="container">
+    <div class="mb-5" style="max-width:640px;">
+      <p class="eyebrow mb-2">Clergy Services</p>
+      <h2 class="mb-3">Resources to support your ministry</h2>
+      <p style="color:#4a5a41;">Access clergy application, renewal, and update forms, with additional ministry resources and services to come.</p>
+    </div>    
+
+    <div class="row g-4">
+        <!-- Application Form -->
+        <div class="col-md-4">
+            <div class="program-card p-4">
+            <div class="d-flex gap-2 mb-3">
+                <span class="badge badge-outline px-2 py-1">New Clergy</span>
+            </div>
+            <h3 class="h4 mb-2">Application Form</h3>
+            <p style="color:#48583f;">For clergy members applying for the first time. Includes your church information, pastoral reference, and program selection.</p>
+            <a href="application-form.html" class="btn btn-link prog-link">
+                Fill out form &rarr;
+            </a>
+            </div>
+        </div>
+
+        <!-- Renewal Form -->
+        <div class="col-md-4">
+            <div class="program-card p-4">
+            <div class="d-flex gap-2 mb-3">
+                <span class="badge badge-outline px-2 py-1">Existing Clergy</span>
+            </div>
+            <h3 class="h4 mb-2">Renewal Form</h3>
+            <p style="color:#48583f;">For clergy renewing their current standing or credentials. Confirms your continued church affiliation and status.</p>
+            <a href="renewal-form.html" class="btn btn-link prog-link">
+                Fill out form &rarr;
+            </a>
+            </div>
+        </div>
+
+        <!-- Update Form -->
+        <div class="col-md-4">
+            <div class="program-card p-4">
+            <div class="d-flex gap-2 mb-3">
+                <span class="badge badge-outline px-2 py-1">Existing Clergy</span>
+            </div>
+            <h3 class="h4 mb-2">Update Form</h3>
+            <p style="color:#48583f;">For clergy needing to update contact information, church details, or other information already on file.</p>
+            <a href="update-form.html" class="btn btn-link prog-link">
+                Fill out form &rarr;
+            </a>
+            </div>
+        </div>
+    </div>
+
+  </div>
+</section>
+{% endblock %}
