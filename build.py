@@ -11,7 +11,7 @@ pages = [
     "index.html",
     "course-catalog.html",
     "statement.html",
-    "register-form.html",
+    "apply-now.html",
     "ministry.html"
 ]
 
