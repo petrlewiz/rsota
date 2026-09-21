@@ -12,7 +12,7 @@
       <p style="color:#4a5a41;">Complete the application below to enroll in the program that fits your calling. Once it's reviewed and approved, you'll receive next steps for beginning your studies.</p>
     </div>
 
-  <div class="my-5 p-3 border-start border-primary border-3 short-info w-75">
+  <div class="my-5 p-3 border-start border-primary border-3 short-info w-100">
     <h5 class="text-primary">Program Costs</h5>
 
     <p class="mb-3">
@@ -37,144 +37,147 @@
     </p>
   </div>
 
+  <div class="row g-4">
+    <div class="col-md-2">
+      <img src="static/images/form2.png" alt="" class="img-fluid">
+    </div>
+    <div class="col-md-10">
+      <div class="reg-wrapper shadow w-100">
+        <p class="eyebrow">Registration</p>
+        <h2 class="font-display reg-title">Theology Registration Form</h2>
+        <p class="reg-sub">Please complete all required fields marked with an asterisk (*).</p>
 
-  <div class="reg-wrapper shadow">
-    <p class="eyebrow">Registration</p>
-    <h2 class="font-display reg-title">Theology Registration Form</h2>
-    <p class="reg-sub">Please complete all required fields marked with an asterisk (*).</p>
+        <form id="theologyRegistrationForm" action="https://formspree.io/f/xzebnoon" method="POST" novalidate>
 
-    <form id="theologyRegistrationForm" action="https://formspree.io/f/xzebnoon" method="POST" novalidate>
+          <!-- Sets the subject line of the notification email Formspree sends you -->
+          <input type="hidden" name="_subject" value="New Theology Registration Submission">
 
-      <!-- Sets the subject line of the notification email Formspree sends you -->
-      <input type="hidden" name="_subject" value="New Theology Registration Submission">
+          <!-- Honeypot field: bots tend to fill this in, real users never see it -->
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
 
-      <!-- Honeypot field: bots tend to fill this in, real users never see it -->
-      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+          <span class="section-label">Personal Information</span>
 
-      <span class="section-label">Personal Information</span>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="firstName" class="form-label">First Name *</label>
+              <input type="text" class="form-control" id="firstName" name="firstName" required>
+              <div class="invalid-feedback">Please enter your first name.</div>
+            </div>
+            <div class="col-md-6">
+              <label for="lastName" class="form-label">Last Name *</label>
+              <input type="text" class="form-control" id="lastName" name="lastName" required>
+              <div class="invalid-feedback">Please enter your last name.</div>
+            </div>
 
-      <div class="row g-3">
-        <div class="col-md-6">
-          <label for="firstName" class="form-label">First Name *</label>
-          <input type="text" class="form-control" id="firstName" name="firstName" required>
-          <div class="invalid-feedback">Please enter your first name.</div>
-        </div>
-        <div class="col-md-6">
-          <label for="lastName" class="form-label">Last Name *</label>
-          <input type="text" class="form-control" id="lastName" name="lastName" required>
-          <div class="invalid-feedback">Please enter your last name.</div>
-        </div>
+            <div class="col-md-6">
+              <label for="phone" class="form-label">Phone *</label>
+              <input type="tel" class="form-control" id="phone" name="phone" required>
+              <div class="invalid-feedback">Please enter your phone number.</div>
+            </div>
+            <div class="col-md-6">
+              <label for="email" class="form-label">Email Address *</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+              <div class="invalid-feedback">Please enter a valid email address.</div>
+            </div>
 
-        <div class="col-md-6">
-          <label for="phone" class="form-label">Phone *</label>
-          <input type="tel" class="form-control" id="phone" name="phone" required>
-          <div class="invalid-feedback">Please enter your phone number.</div>
-        </div>
-        <div class="col-md-6">
-          <label for="email" class="form-label">Email Address *</label>
-          <input type="email" class="form-control" id="email" name="email" required>
-          <div class="invalid-feedback">Please enter a valid email address.</div>
-        </div>
+            <div class="col-12">
+              <label for="streetAddress" class="form-label">Street Address *</label>
+              <input type="text" class="form-control" id="streetAddress" name="streetAddress" required>
+              <div class="invalid-feedback">Please enter your street address.</div>
+            </div>
 
-        <div class="col-12">
-          <label for="streetAddress" class="form-label">Street Address *</label>
-          <input type="text" class="form-control" id="streetAddress" name="streetAddress" required>
-          <div class="invalid-feedback">Please enter your street address.</div>
-        </div>
+            <div class="col-md-5">
+              <label for="city" class="form-label">City *</label>
+              <input type="text" class="form-control" id="city" name="city" required>
+              <div class="invalid-feedback">Please enter your city.</div>
+            </div>
+            <div class="col-md-4">
+              <label for="province" class="form-label">Province *</label>
+              <select class="form-select" id="province" name="province" required>
+                <option value="" selected disabled>Choose...</option>
+                <option>Alberta</option>
+                <option>British Columbia</option>
+                <option>Manitoba</option>
+                <option>New Brunswick</option>
+                <option>Newfoundland and Labrador</option>
+                <option>Nova Scotia</option>
+                <option>Ontario</option>
+                <option>Prince Edward Island</option>
+                <option>Quebec</option>
+                <option>Saskatchewan</option>
+                <option>Northwest Territories</option>
+                <option>Nunavut</option>
+                <option>Yukon</option>
+                <option>Other</option>
+              </select>
+              <div class="invalid-feedback">Please select your province.</div>
+            </div>
+            <div class="col-md-3">
+              <label for="postalCode" class="form-label">Postal Code</label>
+              <input type="text" class="form-control" id="postalCode" name="postalCode">
+            </div>
+          </div>
 
-        <div class="col-md-5">
-          <label for="city" class="form-label">City *</label>
-          <input type="text" class="form-control" id="city" name="city" required>
-          <div class="invalid-feedback">Please enter your city.</div>
-        </div>
-        <div class="col-md-4">
-          <label for="province" class="form-label">Province *</label>
-          <select class="form-select" id="province" name="province" required>
-            <option value="" selected disabled>Choose...</option>
-            <option>Alberta</option>
-            <option>British Columbia</option>
-            <option>Manitoba</option>
-            <option>New Brunswick</option>
-            <option>Newfoundland and Labrador</option>
-            <option>Nova Scotia</option>
-            <option>Ontario</option>
-            <option>Prince Edward Island</option>
-            <option>Quebec</option>
-            <option>Saskatchewan</option>
-            <option>Northwest Territories</option>
-            <option>Nunavut</option>
-            <option>Yukon</option>
-            <option>Other</option>
-          </select>
-          <div class="invalid-feedback">Please select your province.</div>
-        </div>
-        <div class="col-md-3">
-          <label for="postalCode" class="form-label">Postal Code</label>
-          <input type="text" class="form-control" id="postalCode" name="postalCode">
-        </div>
+          <span class="section-label">Church Information</span>
+
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="churchName" class="form-label">Church Name *</label>
+              <input type="text" class="form-control" id="churchName" name="churchName" required>
+              <div class="invalid-feedback">Please enter your church name.</div>
+            </div>
+            <div class="col-md-6">
+              <label for="pastorName" class="form-label">Pastor's Name *</label>
+              <input type="text" class="form-control" id="pastorName" name="pastorName" required>
+              <div class="invalid-feedback">Please enter your pastor's name.</div>
+            </div>
+            <div class="col-md-6">
+              <label for="churchPhone" class="form-label">Church Phone *</label>
+              <input type="tel" class="form-control" id="churchPhone" name="churchPhone" required>
+              <div class="invalid-feedback">Please enter the church phone number.</div>
+            </div>
+          </div>
+
+          <span class="section-label">Program</span>
+
+          <label class="form-label d-block mb-2">Select a Program *</label>
+          <div class="program-radios" role="radiogroup" aria-required="true">
+            <div class="program-option">
+              <input type="radio" id="progCertificate" name="program" value="Certificate" required>
+              <label for="progCertificate">
+                <span class="prog-name">Certificate</span>
+                <span class="prog-desc">Foundational theological studies</span>
+              </label>
+            </div>
+            <div class="program-option">
+              <input type="radio" id="progDiploma" name="program" value="Diploma" required>
+              <label for="progDiploma">
+                <span class="prog-name">Diploma</span>
+                <span class="prog-desc">Extended, in-depth theological training</span>
+              </label>
+            </div>
+          </div>
+          <div class="invalid-feedback" id="programFeedback">Please select a program.</div>
+
+          <div class="form-check mt-4 pt-2">
+            <input class="form-check-input" type="checkbox" id="agreeRSOTA" name="agreeRSOTA" required>
+            <label class="form-check-label" for="agreeRSOTA">
+              I agree to accept all the requirements of RSOTA. *
+            </label>
+            <div class="invalid-feedback">You must agree to the requirements of RSOTA to continue.</div>
+          </div>
+
+          <button type="submit" class="btn btn-forest mt-4">Submit Registration</button>
+
+        </form>
+        <!-- <div id="formSuccessMessage" class="alert mt-4 d-none" role="alert">
+          Thank you! Your registration has been submitted successfully.
+        </div> -->
+        <div id="formErrorMessage" class="alert mt-4 d-none" role="alert">
+          Sorry, there was a problem submitting your registration. Please try again, or contact us directly.
+        </div>  
       </div>
-
-      <span class="section-label">Church Information</span>
-
-      <div class="row g-3">
-        <div class="col-md-6">
-          <label for="churchName" class="form-label">Church Name *</label>
-          <input type="text" class="form-control" id="churchName" name="churchName" required>
-          <div class="invalid-feedback">Please enter your church name.</div>
-        </div>
-        <div class="col-md-6">
-          <label for="pastorName" class="form-label">Pastor's Name *</label>
-          <input type="text" class="form-control" id="pastorName" name="pastorName" required>
-          <div class="invalid-feedback">Please enter your pastor's name.</div>
-        </div>
-        <div class="col-md-6">
-          <label for="churchPhone" class="form-label">Church Phone *</label>
-          <input type="tel" class="form-control" id="churchPhone" name="churchPhone" required>
-          <div class="invalid-feedback">Please enter the church phone number.</div>
-        </div>
-      </div>
-
-      <span class="section-label">Program</span>
-
-      <label class="form-label d-block mb-2">Select a Program *</label>
-      <div class="program-radios" role="radiogroup" aria-required="true">
-        <div class="program-option">
-          <input type="radio" id="progCertificate" name="program" value="Certificate" required>
-          <label for="progCertificate">
-            <span class="prog-name">Certificate</span>
-            <span class="prog-desc">Foundational theological studies</span>
-          </label>
-        </div>
-        <div class="program-option">
-          <input type="radio" id="progDiploma" name="program" value="Diploma" required>
-          <label for="progDiploma">
-            <span class="prog-name">Diploma</span>
-            <span class="prog-desc">Extended, in-depth theological training</span>
-          </label>
-        </div>
-      </div>
-      <div class="invalid-feedback" id="programFeedback">Please select a program.</div>
-
-      <div class="form-check mt-4 pt-2">
-        <input class="form-check-input" type="checkbox" id="agreeRSOTA" name="agreeRSOTA" required>
-        <label class="form-check-label" for="agreeRSOTA">
-          I agree to accept all the requirements of RSOTA. *
-        </label>
-        <div class="invalid-feedback">You must agree to the requirements of RSOTA to continue.</div>
-      </div>
-
-      <button type="submit" class="btn btn-forest mt-4">Submit Registration</button>
-
-    </form>
-
-
-
-    <!-- <div id="formSuccessMessage" class="alert mt-4 d-none" role="alert">
-      Thank you! Your registration has been submitted successfully.
-    </div> -->
-    <div id="formErrorMessage" class="alert mt-4 d-none" role="alert">
-      Sorry, there was a problem submitting your registration. Please try again, or contact us directly.
-    </div>  
+    </div>
   </div>
 </div>
 <!-- Form Success Modal -->
