@@ -12,7 +12,9 @@ pages = [
     "course-catalog.html",
     "statement.html",
     "apply-now.html",
-    "ministry.html"
+    "ministry.html",
+    "new-clergy.html",
+    "renewal-clergy.html"
 ]
 
 for page in pages:
