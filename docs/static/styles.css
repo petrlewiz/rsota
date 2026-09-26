@@ -183,6 +183,9 @@ line-height:1.45; color:var(--green-shadow); max-width:760px; margin:1.2rem auto
 .cta-band{ background:var(--gold); padding:4rem 0; }
 .cta-band h2{ color:var(--green-shadow); }
 
+.cta-minister{ background:var(--gold); padding:4rem 0; }
+.cta-minister h2{ color:var(--green-shadow); } 
+
 /* ---- Footer ---- */
 footer{ background:var(--green-shadow); color:#c9d8bc; padding:4.5rem 0 1.5rem; }
 footer h4{ font-family:'Space Mono', monospace; color:var(--gold-soft); font-size:.75rem; letter-spacing:.1em; text-transform:uppercase; }
