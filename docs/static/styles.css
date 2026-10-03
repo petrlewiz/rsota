@@ -131,7 +131,9 @@ line-height:1.35; color:var(--green-shadow); border-left:3px solid var(--gold); 
 background:var(--paper); border:1px solid rgba(22,36,15,.12); border-left:3px solid transparent;
 border-radius:2px; height:100%; transition:border-color .2s ease, background .2s ease, transform .2s ease;
 }
-.program-card:hover{ border-left-color:var(--gold); background:#fffdf6; transform:translateY(-3px); }
+@media (hover: hover) and (pointer: fine){
+    .program-card:hover{ border-left-color:var(--gold); background:#fffdf6; transform:translateY(-3px); }
+}
 .badge-outline{
 font-family:'Space Mono', monospace; font-size:.68rem; letter-spacing:.06em; text-transform:uppercase;
 color:var(--sage); border:1px solid var(--sage); background:transparent; font-weight:400;
