@@ -14,7 +14,8 @@ pages = [
     "register.html",
     "ministry.html",
     "new-clergy.html",
-    "renewal-clergy.html"
+    "renewal-clergy.html",
+    "update-clergy.html"
 ]
 
 for page in pages:
