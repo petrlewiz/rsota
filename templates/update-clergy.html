@@ -22,6 +22,7 @@
                 <h2 class="font-display reg-title">Clergy Update Form</h2>
                 <p class="reg-sub">Please complete all required fields marked with an asterisk (*).</p>
 
+                <!-- Clergy Update Form -->
                 <form id="clergyUpdateForm" action="https://formspree.io/f/xzebnoon" method="POST" novalidate>
                     
                     <!-- Sets the subject line of the notification email Formspree sends you -->
@@ -115,14 +116,82 @@
 
                     <button type="submit" class="btn btn-forest mt-4">Submit Update</button>
                 </form>
+                <div id="formErrorMessage" class="alert mt-4 d-none" role="alert">
+                    Sorry, there was a problem submitting your application. Please try again, or contact us directly.
+                </div>
             </div>
         </div>
     </div>
+</div>
+
+<!-- Form Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-sm">
+    <div class="modal-content modal-style">
+      <div class="modal-body text-center">
+        <h5 id="successModalLabel">Submission successful!</h5>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-forest px-4 btn-sm" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 
 {% endblock %}
 
 {% block script %}
+<script>
+    (function () {
+        'use strict';
+        const form = document.getElementById('clergyUpdateForm');
+        const errorMessage = document.getElementById('formErrorMessage');
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const submitBtnDefaultText = submitBtn.textContent;
+
+        const successModalEL = document.getElementById('successModal');
+        const successModal = new bootstrap.Modal(successModalEL);
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            errorMessage.classList.add('d-none');
+
+            if (!form.checkValidity()) {
+                form.classList.add('was-validated');
+                return;
+            }
+
+            form.classList.add('was-validated');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting…';
+
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            })
+            .then(response => {
+                if (response.ok) {
+                    successModal.show();
+
+                    form.reset();
+                    form.classList.remove('was-validated');
+                } else {
+                    throw new Error('Submission failed.');
+                }
+            })
+            .catch(() => {
+                errorMessage.classList.remove('d-none');
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = submitBtnDefaultText;
+            });
+        });
+    })();
+</script>
 
 {% endblock %}
