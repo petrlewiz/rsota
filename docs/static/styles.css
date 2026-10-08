@@ -59,6 +59,12 @@ background:var(--gold); transform:scaleX(0); transform-origin:left;
 transition:transform .2s ease;
 }
 .navbar .nav-link:hover::after{ transform:scaleX(1); }
+/* .navbar .nav-link:hover::after,
+.navbar .nav-link:focus-visible::after,
+.navbar .nav-link.active::after {
+  transform: scaleX(1);
+} */
+
 .navbar-brand{ display:flex; align-items:center; gap:.9rem; }
 .navbar-brand img{ height:50px; width:auto; display:block; }
 .navbar-brand .brand-divider{
@@ -110,6 +116,9 @@ text-transform:uppercase; color:var(--sage); white-space:nowrap;
 position:relative; display:flex; align-items:center; justify-content:center;
 aspect-ratio:1/1; max-width:380px; margin:0 auto;
 }
+
+/* ---- Sections ---- */
+section { scroll-margin-top: 90px; }
 
 /* ---- Verse strip ---- */
 .verse-strip{ background:var(--bs-primary); color:var(--tint); padding:1.1rem 0; }
