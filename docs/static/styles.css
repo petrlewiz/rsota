@@ -83,6 +83,9 @@ width:26px; height:2px; background:var(--gold); margin:.3rem 0 .28rem;
 font-family:'Work Sans', sans-serif; font-size:.63rem; letter-spacing:.09em;
 text-transform:uppercase; color:var(--sage); white-space:nowrap;
 }
+.navbar-collapse.collapsing {
+  transition: none;
+}
 
 /* ---- Hero ---- */
 .hero{
