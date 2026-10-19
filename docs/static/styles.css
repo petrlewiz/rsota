@@ -77,7 +77,7 @@ display:flex; align-items:baseline; gap:.35rem;
 }
 /* .navbar-brand .brand-caption .name .dot{ color:var(--gold); } - delete this*/
 .navbar-brand .brand-caption .rule{
-width:26px; height:2px; background:var(--gold); margin:.3rem 0 .28rem;
+width:77px; height:2px; background:var(--gold); margin:.3rem 0 .28rem;
 }
 .navbar-brand .brand-caption .full{
 font-family:'Work Sans', sans-serif; font-size:.63rem; letter-spacing:.09em;
