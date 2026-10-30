@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+
+{% block title %}Events | Rhema Studies of Theology Association{% endblock %}
+
+
+{% block content %}
+
+{# ------------------------------------------------------------------
+   EVENT DATA: edit these lists to add, change, or remove events.
+   link / link_text are optional. Without them, "note" is shown instead.
+------------------------------------------------------------------- #}
+
+{% set featured = {
+  "month": "May", "day": "1",
+  "title": "RSOTA Conference 2027",
+  "meta": "Sat, May 1, 2027 · Malton Church, 3415 Etude Dr., Mississauga, ON",
+  "description": "Cost: $180.00 per couple (husband & wife) or $95.00 single.",
+  "link": "register.html", "link_text": "Register Now"
+} %}
+
+{% set upcoming = [
+  {
+    "month": "May", "day": "1",
+    "title": "RSOTA Conference 2027",
+    "meta": "Sat, May 1, 2027 · Malton Church, 3415 Etude Dr., Mississauga, ON",
+    "link": "register.html", "link_text": "Register →"
+  }
+] %}
+
+
+<!-- PAGE HEADER -->
+<section class="events-hero">
+  <div class="container">
+    <p class="eyebrow mb-3">Events</p>
+    <h1 class="mb-4">Gather, learn, and <em>grow</em> together.</h1>
+    <p class="lede mb-0">Class sessions, workshops, and special gatherings for RSOTA students, ministers, and friends.</p>
+  </div>
+</section>
+
+<!-- FEATURED EVENT -->
+{% if featured %}
+<section style="padding:5rem 0 2rem;">
+  <div class="container">
+    <p class="eyebrow mb-2">Next Up</p>
+    <h2 class="mb-4">Featured event</h2>
+
+    <div class="featured-event">
+      <div class="row gy-4 align-items-center">
+        <div class="col-lg-8">
+          <div class="d-flex gap-4">
+            <div class="date-block">
+              <div class="month">{{ featured.month }}</div>
+              <div class="day">{{ featured.day }}</div>
+            </div>
+            <div>              
+              <h3 class="h4 mb-2">{{ featured.title }}</h3>
+              <p class="event-meta mb-2">{{ featured.meta }}</p>
+              <p class="mb-0" style="color:#33422b;">{{ featured.description }}</p>
+            </div>
+          </div>
+        </div>
+        {% if featured.link %}
+        <div class="col-lg-4 text-lg-end">
+          <a href="{{ featured.link }}" class="btn btn-forest px-4 py-2">{{ featured.link_text }}</a>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- UPCOMING EVENTS -->
+<section style="padding:3rem 0 6rem;" id="upcoming">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-4">
+      <div>
+        <p class="eyebrow mb-2">Calendar</p>
+        <h2 class="mb-0">Upcoming events</h2>
+      </div>
+    </div>
+
+    <div class="d-flex flex-column gap-3">
+      {% for event in upcoming %}
+      <article class="event-card">
+        <div class="row gy-3 align-items-center">
+          <div class="col-md-9">
+            <div class="d-flex gap-4">
+              <div class="date-block">
+                <div class="month">{{ event.month }}</div>
+                <div class="day">{{ event.day }}</div>
+              </div>
+              <div>                
+                <h3 class="h5 mb-1">{{ event.title }}</h3>
+                <p class="event-meta mb-0">{{ event.meta }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 text-md-end">
+            {% if event.link %}
+            <a href="{{ event.link }}" class="prog-link">{{ event.link_text }}</a>
+            {% elif event.note %}
+            <span class="small text-muted">{{ event.note }}</span>
+            {% endif %}
+          </div>
+        </div>
+      </article>
+      {% else %}
+      <p class="text-muted mb-0">No upcoming events are scheduled right now. Please check back soon.</p>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="container d-flex flex-wrap align-items-center justify-content-between gap-4">
+    <h2 class="mb-0" style="max-width:480px;">Have an event in mind or a question?</h2>
+    <a href="index.html#contact" class="btn btn-forest px-4 py-2">Contact Us</a>
+  </div>
+</section>
+
+{% endblock %}

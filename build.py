@@ -15,8 +15,10 @@ pages = [
     "ministry.html",
     "new-clergy.html",
     "renewal-clergy.html",
-    "update-clergy.html"
-]
+    "update-clergy.html",
+    "events.html",
+    "form-conference.html"
+    ]
 
 for page in pages:
     template = env.get_template(page)

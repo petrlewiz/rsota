@@ -1,0 +1,210 @@
+{% extends "base.html" %}
+
+{% block title %}Conference 2027 Form{% endblock %}
+
+{% block stylesheet_other %}<link rel="stylesheet" href="static/registration-form.css">{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="my-5" style="max-width:640px;">
+      <h2 class="mb-3">Conference 2027 Registration</h2>
+      <p style="color:#4a5a41;">
+        We are delighted to welcome you to Conference 2027! Join us for a day of worship,
+        fellowship, and teaching. We are praying that you will be encouraged, refreshed,
+        and richly blessed as we gather together.
+      </p>
+      <p style="color:#4a5a41;">Please complete the form below to register.</p>    
+    </div>
+
+  <div class="my-5 p-3 border-start border-primary border-3 short-info w-100">
+    <h5 class="text-primary">Conference Details</h5>
+    
+    <ul class="list-unstyled mb-2">
+      <li><strong>Conference Date:</strong> Saturday, May 1, 2027</li>
+      <li><strong>Location:</strong> Malton Church, 3415 Etude Dr., Mississauga, ON</li>
+      <li><strong>Cost &mdash; Couple (Husband &amp; Wife):</strong> $180.00</li>
+      <li><strong>Cost &mdash; Single:</strong> $95.00</li>
+    </ul>
+    <p class="fst-italic mb-0">Please note, all registration fees are <strong>non-refundable</strong>.</p>
+  </div>
+
+  <div class="my-5 p-3 border-start border-primary border-3 short-info w-100">
+    <h5 class="text-primary">Payment Information</h5>
+
+    <p class="mb-0">
+      For e-transfer, use
+      <a href="mailto:dr.lewis@rsota.ca">dr.lewis@rsota.ca</a>.
+    </p>
+  </div>
+
+  <div class="row g-4">
+    <div class="col-md-2 d-none d-md-block">
+      <img src="static/images/form2.png" alt="" class="img-fluid">
+    </div>
+    <div class="col-md-10">
+      <div class="reg-wrapper shadow w-100">
+        <h2 class="font-display reg-title">Conference 2027 Registration Form</h2>
+        <p class="reg-sub">Please complete all required fields marked with an asterisk (*).</p>
+
+        <form id="clergyRenewalForm" action="https://formspree.io/f/xzebnoon" method="POST" novalidate>
+
+          <!-- Sets the subject line of the notification email Formspree sends you -->
+          <input type="hidden" name="_subject" value="Conference 2027 Registration Form">
+
+          <!-- Honeypot field: bots tend to fill this in, real users never see it -->
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+          <span class="section-label">Attendee Information</span>
+
+          <div class="row g-3 mb-3">
+            <div class="col-md-4">
+              <label for="title" class="form-label">Title</label>
+              <select class="form-select" id="title" name="title">
+                <option value="" selected disabled>Choose...</option>
+                <option>Dr</option>
+                <option>Bishop</option>
+                <option>Pastor</option>
+                <option>Lay Minister</option>
+              </select>
+              <div class="invalid-feedback">Please select a title.</div>
+            </div>
+          </div>
+
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="firstName" class="form-label">First Name *</label>
+              <input type="text" class="form-control" id="firstName" name="firstName" required>
+              <div class="invalid-feedback">Please enter your first name.</div>
+            </div>
+            <div class="col-md-6">
+              <label for="lastName" class="form-label">Last Name *</label>
+              <input type="text" class="form-control" id="lastName" name="lastName" required>
+              <div class="invalid-feedback">Please enter your last name.</div>
+            </div>
+
+            <div class="col-md-12">
+              <label for="spouseName" class="form-label">Spouse Name (if attending)</label>
+              <input type="text" class="form-control" id="spouseName" name="spouseName">
+              <div class="invalid-feedback">Please enter your spouse's name.</div>
+            </div>
+            <div class="col-12">
+              <label for="mailingAddress" class="form-label">Mailing Address *</label>
+              <input type="text" class="form-control" id="mailingAddress" name="mailingAddress" required>
+              <div class="invalid-feedback">Please enter your mailing address.</div>
+            </div>
+            <div class="col-md-6">
+              <label for="phone" class="form-label">Phone *</label>
+              <input type="tel" class="form-control" id="phone" name="phone" required>
+              <div class="invalid-feedback">Please enter your phone number.</div>
+            </div>
+            <div class="col-md-6">
+              <label for="email" class="form-label">Email Address *</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+              <div class="invalid-feedback">Please enter a valid email address.</div>
+            </div>
+            <div class="col-md-12">
+              <label for="churchName" class="form-label">Church Name *</label>
+              <input type="text" class="form-control" id="churchName" name="churchName" required>
+              <div class="invalid-feedback">Please enter your church name.</div>
+            </div>
+          </div>
+
+          <div class="form-check mt-4 pt-2">
+            <input class="form-check-input" type="checkbox" id="agreeRSOTA" name="agreeRSOTA" required>
+            <label class="form-check-label" for="agreeRSOTA">
+              I have read and agree to the fees and payment terms stated above. *
+            </label>
+            <div class="invalid-feedback">Please check the box to confirm you agree to the fees and payment terms.</div>
+          </div>
+
+          <button type="submit" class="btn btn-forest mt-4">Submit Renewal</button>
+
+        </form>
+        <!-- <div id="formSuccessMessage" class="alert mt-4 d-none" role="alert">
+          Thank you! Your renewal has been submitted successfully.
+        </div> -->
+        <div id="formErrorMessage" class="alert mt-4 d-none" role="alert">
+          Sorry, there was a problem submitting your renewal. Please try again, or contact us directly.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Form Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-sm">
+    <div class="modal-content modal-style">
+      <div class="modal-body text-center">
+        <h5 id="successModalLabel">Submission successful!</h5>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-forest px-4 btn-sm" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
+
+{% block script %}
+<script>
+  (function () {
+    'use strict';
+    const form = document.getElementById('clergyRenewalForm');
+    // const successMessage = document.getElementById('formSuccessMessage');
+    const errorMessage = document.getElementById('formErrorMessage');
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const submitBtnDefaultText = submitBtn.textContent;
+
+    const successModalEL = document.getElementById('successModal');
+    const successModal = new bootstrap.Modal(successModalEL);
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      // successMessage.classList.add('d-none');
+      errorMessage.classList.add('d-none');
+
+      if (!form.checkValidity()) {
+        form.classList.add('was-validated');
+        return;
+      }
+
+      form.classList.add('was-validated');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Submitting…';
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      })
+        .then(response => {
+          if (response.ok) {
+            // successMessage.classList.remove('d-none');
+            successModal.show();
+
+            form.reset();
+            form.classList.remove('was-validated');
+          } else {
+            return response.json().then(data => {
+              throw new Error(
+                (data && data.errors && data.errors.map(e => e.message).join(', ')) ||
+                'Submission failed.'
+              );
+            });
+          }
+        })
+        .catch(() => {
+          errorMessage.classList.remove('d-none');
+        })
+        .finally(() => {
+          submitBtn.disabled = false;
+          submitBtn.textContent = submitBtnDefaultText;
+        });
+    }, false);
+  })();
+</script>
+{% endblock %}

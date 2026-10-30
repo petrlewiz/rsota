@@ -239,3 +239,47 @@ footer .brand-text{ color:#fff; font-family:'Barlow Semi Condensed', sans-serif;
             rgba(0,0,0,0) 100%
         ),
     url('./images/minister.webp') center bottom / cover no-repeat;}
+
+    
+/* ---- Events page ---- */
+/* Page header */
+.events-hero{
+padding:6rem 0 4.5rem;
+background:
+    linear-gradient(rgba(22,36,15,.55), rgba(22,36,15,.55)),
+    var(--bs-primary);
+/* To use a photo instead, replace var(--bs-primary) with: url('./images/events.webp') center/cover no-repeat */
+}
+.events-hero h1{ color:var(--tint); font-size:clamp(2.2rem,5vw,3.6rem); line-height:1.05; }
+.events-hero h1 em{ font-style:italic; color:var(--gold); font-weight:500; }
+.events-hero .lede{ max-width:52ch; color:var(--tint); font-size:1.08rem; }
+.events-hero .eyebrow{ color:var(--gold-soft); }
+
+/* Featured event */
+.featured-event{
+background:var(--tint); border-left:3px solid var(--gold); border-radius:2px; padding:2rem;
+}
+
+/* Date block */
+.date-block{
+flex:0 0 76px; text-align:center; border:1px solid rgba(22,36,15,.18);
+background:var(--paper); border-radius:2px; padding:.55rem 0 .5rem;
+}
+.date-block .month{
+font-family:'Space Mono', monospace; font-size:.7rem; letter-spacing:.12em;
+text-transform:uppercase; color:var(--sage);
+}
+.date-block .day{
+font-family:'Fraunces', serif; font-size:1.9rem; font-weight:600; line-height:1; color:var(--bs-primary);
+}
+.featured-event .date-block{ background:#fff; }
+
+/* Event rows */
+.event-card{
+background:var(--paper); border:1px solid rgba(22,36,15,.12); border-left:3px solid transparent;
+border-radius:2px; padding:1.5rem; transition:border-color .2s ease, background .2s ease;
+}
+@media (hover: hover) and (pointer: fine){
+.event-card:hover{ border-left-color:var(--gold); background:#fffdf6; }
+}
+.event-meta{ font-size:.88rem; color:#4a5a41; }
