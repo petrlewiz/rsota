@@ -41,6 +41,8 @@ a{ text-decoration:none; }
 .btn-outline-forest:hover{ background:var(--tint); border-color:var(--bs-primary); color:var(--green-shadow); }
 .btn-gold{ background:var(--gold); border-color:var(--gold); color:var(--green-shadow); font-weight:600; }
 .btn-gold:hover{ background:var(--gold-soft); border-color:var(--gold-soft); color:var(--green-shadow); }
+.btn-cta{ background:var(--gold-soft); border-color:var(--gold-soft); color:var(--green-shadow); font-weight:600; }
+.btn-cta:hover{ background: color-mix(in srgb, var(--gold-soft) 95%, black); border-color: color-mix(in srgb, var(--gold-soft) 95%, black); color:var(--green-shadow); }
 
 /* ---- Navbar ---- */
 .navbar{
@@ -244,10 +246,10 @@ footer .brand-text{ color:#fff; font-family:'Barlow Semi Condensed', sans-serif;
 /* ---- Events page ---- */
 /* Page header */
 .events-hero{
-padding:6rem 0 4.5rem;
+padding:11rem 0 11rem;
 background:
     linear-gradient(rgba(22,36,15,.55), rgba(22,36,15,.55)),
-    var(--bs-primary);
+    url('./images/events.webp') center/cover no-repeat;
 /* To use a photo instead, replace var(--bs-primary) with: url('./images/events.webp') center/cover no-repeat */
 }
 .events-hero h1{ color:var(--tint); font-size:clamp(2.2rem,5vw,3.6rem); line-height:1.05; }
